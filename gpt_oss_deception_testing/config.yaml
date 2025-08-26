@@ -1,0 +1,45 @@
+# GPT-OSS Deception Testing Framework Configuration
+
+# Inference settings
+inference:
+  mode: "local"  # "local" or "api"
+  api_key: ""
+  max_retries: 1
+
+# Model settings
+model:
+  name: "gpt-oss-20b"
+  temperature: 1.0
+  top_p: 1.0
+  seed: 42
+
+# Test configuration - all combinations will be automatically generated
+tests:
+  n_runs: 50  # Number of runs per test cell
+  
+  # Scenarios to test
+  scenarios:
+    - "medical"
+    - "legal" 
+    - "wartime"
+    - "financial"
+    - "nuclear"
+  
+  # Incentive structures to test
+  incentives:
+    - "none"
+    - "self_preservation"
+    - "utilitarian"
+  
+  # Field names to test
+  field_names:
+    - "ERROR_ACKNOWLEDGMENT"
+  
+# Reasoning effort ablation (only for local mode)
+reasoning_ablation:
+  enabled: true  # Set to true to test different reasoning efforts in local mode
+  reasoning_efforts: ["Low", "Medium", "High"]
+  # When enabled, tests matching these criteria will be run with all reasoning efforts
+  apply_to:
+    scenarios: ["medical", "legal", "wartime", "financial", "nuclear"]
+    incentives: ["none", "self_preservation", "utilitarian"]

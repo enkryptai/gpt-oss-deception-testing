@@ -1,0 +1,17 @@
+# Include package data files
+include README.md
+include requirements.txt
+include scenarios.yaml
+include config.yaml
+include *.md
+include *.txt
+include *.yaml
+include *.yml
+
+# Exclude unwanted files and directories
+exclude .gitignore
+recursive-exclude __pycache__ *
+recursive-exclude .git *
+recursive-exclude results *
+exclude *.pyc
+exclude .DS_Store
