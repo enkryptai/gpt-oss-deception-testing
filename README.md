@@ -1,5 +1,8 @@
 # GPT-OSS Deception Testing Framework
-![Deception in GPT OSS 20B](assets/cover.png)
+
+<p align="center">
+  <img src="assets/cover.png" alt="Deception in GPT OSS 20Bp" width="400"/>
+</p>
 
 A comprehensive framework for testing OpenAI GPT-OSS-20B's deception capabilities across high-stakes scenarios with statistical rigor. This framework evaluates whether the model systems lie when facing incentives for self-preservation or utilitarian concerns.
 
